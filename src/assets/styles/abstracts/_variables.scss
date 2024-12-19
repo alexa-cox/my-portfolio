@@ -1,0 +1,21 @@
+//Define global variables such as colors, font sizes, or spacing units here.
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+  font-family: 'Bellisia';
+  src: url('../../webfonts/Bellisia.woff') format('woff');
+}
+
+$white: #ffffff;
+
+$theme-colors: (
+  'light': #c6d8d2,
+  'dark': #2f3535,
+  'primary': #f9b5a0,
+  'secondary': #ffe4da,
+  'info': #aab7bc,
+  'accent1': #5f9797,
+  'success': #79e100,
+  'warning': #ffd3a1,
+  'danger': #ff3773,
+);
