@@ -1,0 +1,29 @@
+.nav-side {
+  height: 100vh;
+  position: fixed;
+  box-shadow: 5px 0px 10px map-get($theme-colors, 'info');
+
+  .icons {
+    font-size: 2rem;
+  }
+}
+.home-icon {
+  margin-right: 6px;
+}
+
+.about-icon,
+.blog-icon {
+  margin-right: 11px;
+}
+.project-icon {
+  margin-right: 5px;
+}
+
+.profile-img {
+  margin: 8vh 2vw;
+  box-shadow: -10px -10px map-get($theme-colors, 'secondary');
+}
+.nav-link:hover,
+.current {
+  font-size: 24px;
+}
