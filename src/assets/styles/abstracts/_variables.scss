@@ -19,3 +19,9 @@ $theme-colors: (
   'warning': #ffd3a1,
   'danger': #ff3773,
 );
+
+$grid-gutter-width: 0;
+
+.row {
+  max-width: 100vw;
+}

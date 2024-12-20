@@ -4,8 +4,16 @@
 // Bootstrap
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
+// Font Awesome
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
 // Base
 @import 'base/typography';
 @import 'base/global';
 
 // Components
+@import 'components/home';
+@import 'components/sidebar';
