@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import profileImage from '../assets/images/alexandria-profile.png';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 
 function Sidebar() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      sections.forEach((sec) => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 150;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((link) => {
+            link.classList.remove('current');
+          });
+          document
+            .querySelector(`.nav-link[href*=${id}]`)
+            ?.classList.add('current');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className='row'>
       <div className='nav-side d-flex flex-column flex-shrink-0 p-3 bg-light bg-gradient col-2'>

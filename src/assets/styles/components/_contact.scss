@@ -1,0 +1,47 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: 750px;
+  height: 100vh;
+
+  .modal-content {
+    height: 100vh;
+    border-radius: 0;
+    background-color: map-get($theme-colors, 'dark');
+    color: $white;
+  }
+
+  .modal-dialog {
+    margin: 0;
+    max-width: 750px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+}
+
+.modal {
+  .btn-close {
+    color: map-get($theme-colors, 'primary');
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.modal {
+  &.fade .modal-dialog {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  &.show .modal-dialog {
+    transform: translateX(0);
+  }
+}

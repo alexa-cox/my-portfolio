@@ -14,6 +14,11 @@
 @import 'base/typography';
 @import 'base/global';
 
-// Components
-@import 'components/home';
+//Components
+@import 'components/card';
+@import 'components/contact';
 @import 'components/sidebar';
+
+// Sections
+@import 'section/home';
+@import 'section/about';
