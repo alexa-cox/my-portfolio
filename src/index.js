@@ -7,6 +7,7 @@ import './assets/styles/main.scss';
 import Sidebar from './components/Sidebar';
 import ContactButton from './components/ContactForm';
 import Footer from './components/Footer';
+import MobileNav from './components/MobileNav';
 //sections
 import Home from './sections/HomeSection';
 import About from './sections/AboutSection';
@@ -17,8 +18,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <Sidebar />
+    <MobileNav />
     <div className='row justify-content-end'>
-      <div className='col-10'>
+      <div className='col-md-10'>
         <ContactButton />
         <Home />
         <About />
@@ -29,17 +31,3 @@ root.render(
     </div>
   </>
 );
-
-/*
-Complete all page components.
-Complete contact form
-Complete all animations.
-Figure out Routing.
-Project data and handling
-Conditional Render of Featured project + projects or just projects. Ternary 
-Figure out spacing issue / make sure i like look/feel
-Responsive for tablet
-Responsive for phone
-See what i need to do to make deployable.
-Deploy
-*/

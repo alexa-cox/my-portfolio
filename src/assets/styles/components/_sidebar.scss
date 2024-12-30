@@ -3,6 +3,10 @@
   position: fixed;
   box-shadow: 5px 0px 10px map-get($theme-colors, 'info');
 
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+
   .icons {
     font-size: 2rem;
   }

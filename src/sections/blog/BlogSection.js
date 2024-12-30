@@ -5,10 +5,26 @@ import BlogCard from './BlogCard';
 function BlogSection() {
   const [blogs, setBlogs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const blogsToShow = 3;
+
+  // Use window width to determine blogs to show
+  const [blogsToShow, setBlogsToShow] = useState(1);
 
   useEffect(() => {
     setBlogs(selectRandomBlogs(8));
+
+    // Set initial blogs to show based on window width
+    const handleResize = () => {
+      setBlogsToShow(window.innerWidth >= 992 ? 3 : 1);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handlePrev = () => {
@@ -37,7 +53,7 @@ function BlogSection() {
           {blogs.slice(currentIndex, currentIndex + blogsToShow).map((blog) => (
             <div
               key={blog.id}
-              className='col-4 p-4'
+              className='col-12 col-lg-4 p-4'
             >
               <BlogCard blog={blog} />
             </div>
@@ -47,13 +63,13 @@ function BlogSection() {
           className='btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-n2'
           onClick={handlePrev}
         >
-          <i class='fa-solid fa-chevron-left'></i>
+          <i className='fa-solid fa-chevron-left'></i>
         </button>
         <button
           className='btn btn-dark position-absolute top-50 end-0 translate-middle-y me-n2'
           onClick={handleNext}
         >
-          <i class='fa-solid fa-chevron-right'></i>
+          <i className='fa-solid fa-chevron-right'></i>
         </button>
       </div>
 
@@ -64,7 +80,7 @@ function BlogSection() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Read More On Medium Page
+          Read More On Medium
         </a>
       </div>
     </section>

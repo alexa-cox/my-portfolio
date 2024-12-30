@@ -58,7 +58,7 @@ function About() {
     >
       <div className='row px-5 my-5'>
         {/* Skills Section */}
-        <div className='skills col d-flex justify-content-center'>
+        <div className='skills col order-2 order-md-1 d-flex justify-content-center'>
           <div className='d-flex flex-column justify-content-center'>
             <SkillItem
               icon='fa-brands fa-html5'
@@ -110,7 +110,7 @@ function About() {
         </div>
 
         {/* About Info Section */}
-        <div className='about-info col'>
+        <div className='about-info col order-1 order-md-2'>
           <img
             src={alexandriaAbout}
             alt='Alexandria Cox'
@@ -118,17 +118,24 @@ function About() {
           />
           <div className='bg-white px-5'>
             <p>
-              Cupcake ipsum dolor sit amet I love cotton candy jujubes. Donut
-              bear claw pudding sugar plum donut soufflé icing icing gummi
-              bears. Fruitcake I love donut apple pie donut soufflé candy canes
-              chocolate bar.
+              Driven by a passion for technology, I bring a fresh and innovative
+              perspective to full-stack development, building on a foundation in
+              customer service and marketing. My journey has been shaped by a
+              growth mindset and a commitment to continuous learning. With
+              experience in both customer-facing roles and marketing, I’ve
+              developed the ability to empathize with users and understand their
+              needs—skills I apply to create user-centric applications.
             </p>
             <p>
-              Tootsie roll bear claw gingerbread chocolate bar carrot cake
-              muffin soufflé. I love topping caramels gummies I love carrot cake
-              tootsie roll. I love jelly beans chupa chups bear claw tart jelly
-              beans. Ice cream bear claw donut jelly beans donut bear claw
-              croissant.
+              I thrive in dynamic environments, solving problems with efficient
+              and effective solutions. My ability to bridge the gap between
+              technical and non-technical teams allows me to approach
+              development with a unique perspective on user experience and
+              business goals.{' '}
+              <b>
+                Let’s connect to explore how I can contribute to your team’s
+                success.
+              </b>
             </p>
           </div>
         </div>

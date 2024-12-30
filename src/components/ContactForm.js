@@ -3,9 +3,8 @@ import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { validationSchema } from '../utils/validateContactForm';
 
-function ContactForm() {
+function ContactForm({ isMobile }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleModal = () => setIsOpen(!isOpen);
 
   const initialValues = {
@@ -24,15 +23,25 @@ function ContactForm() {
 
   return (
     <>
-      <Button
-        id='contactBtn'
-        color='primary'
-        className='position-fixed top-0 end-0 me-5 mt-4'
-        onClick={toggleModal}
-        style={{ zIndex: 1030 }}
-      >
-        Say Hello
-      </Button>
+      {isMobile ? (
+        <Button
+          color='primary'
+          className='w-100'
+          onClick={toggleModal}
+        >
+          Say Hello
+        </Button>
+      ) : (
+        <Button
+          id='contactBtn'
+          color='primary'
+          className='position-fixed top-0 end-0 me-5 mt-4 d-none d-md-block'
+          onClick={toggleModal}
+          style={{ zIndex: 1030 }}
+        >
+          Say Hello
+        </Button>
+      )}
 
       <Modal
         isOpen={isOpen}

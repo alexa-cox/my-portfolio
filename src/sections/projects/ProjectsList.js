@@ -6,7 +6,6 @@ function ProjectsList() {
   const [activeCategory, setActiveCategory] = useState('all');
   const allProjects = selectAllProjects();
 
-  // Get unique categories using Set
   const categories = [
     'all',
     ...new Set(
@@ -20,7 +19,6 @@ function ProjectsList() {
     return a.localeCompare(b);
   });
 
-  // Get filtered projects based on active category
   const getFilteredProjects = () => {
     if (activeCategory === 'all') return allProjects;
     return selectProjectsByCategory(activeCategory);
@@ -46,7 +44,6 @@ function ProjectsList() {
         Other Projects
       </h2>
 
-      {/* Category Filter Links */}
       <div className='d-flex justify-content-center gap-3 mb-4 flex-wrap bg-white'>
         {categories.map((category) => (
           <button
@@ -65,10 +62,15 @@ function ProjectsList() {
         id='projectContainer'
         className='row gy-3 gx-4 mx-5 justify-content-center'
       >
-        {layoutProjects.map((project) => (
+        {layoutProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
-            project={{ ...project, col: project.actualCol * 4 }}
+            project={{
+              ...project,
+              col: `col-12 col-md-${project.actualCol * 4} ${
+                index >= 3 ? 'd-md-none d-lg-block' : ''
+              }`,
+            }}
           />
         ))}
       </div>

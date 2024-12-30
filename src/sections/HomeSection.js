@@ -28,7 +28,7 @@ function Home() {
           <span className='cardo fw-bold code-number text-info'>21</span>
           <span className='text-info code-text'>&lt;</span>
           <span className='code-text text-primary'>h2</span>
-          <span className='text-info code-text'>&gt;</span> Hello, I'm
+          <span className='text-info code-text'>&gt;</span> Hello, I'm{`\t`}
           <span className='text-info code-text'>&lt;/</span>
           <span className='code-text text-primary'>h2</span>
           <span className='text-info code-text'>&gt;</span>
@@ -39,7 +39,7 @@ function Home() {
           <span className='text-info code-text'>&lt;</span>
           <span className='code-text text-primary'>h1</span>
           <span className='text-info code-text'>&gt;</span>
-          <span id='name'> Alexandria! </span>
+          <span id='name'> Alexandria!{`\t`}</span>
           <span className='text-info code-text'>&lt;/</span>
           <span className='code-text text-primary'>h1</span>
           <span className='text-info code-text'>&gt;</span>
@@ -49,7 +49,8 @@ function Home() {
           <span className='cardo fw-bold code-number text-info'>23</span>
           <span className='text-info code-text'>&lt;</span>
           <span className='code-text text-primary'>h3</span>
-          <span className='text-info code-text'>&gt;</span> Tagline or title
+          <span className='text-info code-text'>&gt;</span> Full-stack Developer{' '}
+          {`\t`}
           <span className='text-info code-text'>&lt;/</span>
           <span className='code-text text-primary'>h3</span>
           <span className='text-info code-text'>&gt;</span>

@@ -51,6 +51,7 @@ function Sidebar() {
               aria-current='page'
             >
               <i className='fa-solid fa-house home-icon'></i>
+              {`\t`}
               Home
             </NavLink>
           </NavItem>
@@ -59,7 +60,7 @@ function Sidebar() {
               href='#about'
               className='link-dark'
             >
-              <i className='fa-solid fa-user about-icon'></i>
+              <i className='fa-solid fa-user about-icon'></i> {`\t`}
               About
             </NavLink>
           </NavItem>
@@ -68,7 +69,7 @@ function Sidebar() {
               href='#projects'
               className='link-dark'
             >
-              <i className='fa-solid fa-computer project-icon'></i>
+              <i className='fa-solid fa-computer project-icon'></i> {`\t`}
               Projects
             </NavLink>
           </NavItem>
@@ -78,16 +79,17 @@ function Sidebar() {
               className='link-dark'
             >
               <i className='fa-solid fa-book-bookmark blog-icon'></i>
+              {`\t`}
               Blog
             </NavLink>
           </NavItem>
         </Nav>
-        <Nav className='icons text-center mt-4 mb-5'>
+        <Nav className='icons text-center mt-4 mb-5 mx-auto'>
           <NavItem>
             <NavLink
               href='https://github.com/alexa-cox'
               target='_blank'
-              className='text-dark'
+              className='text-dark p-2'
             >
               <i className='fa-brands fa-github'></i>
             </NavLink>
@@ -96,7 +98,7 @@ function Sidebar() {
             <NavLink
               href='https://www.linkedin.com/in/alexandriataylorcox/'
               target='_blank'
-              className='text-dark'
+              className='text-dark p-2'
             >
               <i className='fa-brands fa-linkedin-in'></i>
             </NavLink>
@@ -105,7 +107,7 @@ function Sidebar() {
             <NavLink
               href='https://medium.com/@alexa-cox'
               target='_blank'
-              className='text-dark'
+              className='text-dark p-2'
             >
               <i className='fa-brands fa-medium'></i>
             </NavLink>
